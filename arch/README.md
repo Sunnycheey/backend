@@ -1,14 +1,17 @@
 # Academic Knowledge Graph System Design
 
 >Author: Lingze Zeng
+>Modifier: Huichao Li
 >
 >Email: Zenglz_pro@163.com
 >
->Version: v1.0
+>Version: v1.0.1
 
 
 
 [TOC]
+
+* **v1.0.1更新说明**：将api接口更改为restful类型的接口
 
 ## Architecture 
 
@@ -191,13 +194,13 @@ Static Path: ```static/akg/Node/Papers.rdf​```
 >
 > Author Detail 是从论文PDF中解析到的作者的具体信息，List类型
 >
-> ```python
+```python
 > [
 > AuthorInformationDict_1,
 > AuthorInformationDict_2,
 > AuthorInformationDict_3
 > ]
-> ```
+```
 > 其中AuthorInformationDict，为Dict类型,其中Affiliation还套接了一个Dict类型
 > 
 > ```json
@@ -510,22 +513,16 @@ Static Path: ```static/akg/Relation/EquivalentTo.rdf​```
 }
 ```
 
+用户已经登陆时，需要在`HTTP`的`Post`方法中的`Post` header中post字典`{token: xxx}`，其中`xxx`为通过`json web token`产生的token。
 
 
 
 
 **检索作者（Search Author）**
 
-- Method:**POST**
-- URL:  ```/search/author```
+- Method:**GET**
+- URL:  ```/search/authors```
 - Headers:```Content-Type:application/json```
-- Body
-
-	```json
-{
-  "token":"Author name"
-}
-	```
 
 - Reponse
 
@@ -559,19 +556,12 @@ Static Path: ```static/akg/Relation/EquivalentTo.rdf​```
 
 **检索论文（Search Paper）**
 
-- Method:**POST**
+- Method:**GET**
 
-- URL:  ```/search/paper```
+- URL:  ```/search/papers```
 
 - Headers:```Content-Type:application/json```
 
-- Body
-
-  ```json
-  {
-  "token":"Paper info"
-  }
-  ```
 
 - Reponse
 
@@ -606,19 +596,11 @@ Static Path: ```static/akg/Relation/EquivalentTo.rdf​```
 
 **检索会议或期刊（Search Venue）**
 
-- Method:**POST**
+- Method:**GET**
 
-- URL:  ```/search/venue```
+- URL:  ```/search/venues```
 
 - Headers:```Content-Type:application/json```
-
-- Body
-
-  ```json
-  {
-  "token":"info"
-  }
-  ```
 
 - Reponse
 
@@ -649,19 +631,11 @@ Static Path: ```static/akg/Relation/EquivalentTo.rdf​```
 
 **检索主题（Search Topic）**
 
-- Method:**POST**
+- Method:**GET**
 
-- URL:  ```/search/topic```
+- URL:  ```/search/topics```
 
 - Headers:```Content-Type:application/json```
-
-- Body
-
-  ```json
-  {
-  "token":"info"
-  }
-  ```
 
 - Reponse
 
@@ -686,39 +660,6 @@ Static Path: ```static/akg/Relation/EquivalentTo.rdf​```
   }
   ```
 
-
-
-**综合检索（Combined Search）**
-
-- Method:**POST**
-
-- URL:  ```/search/combined```
-
-- Headers:```Content-Type:application/json```
-
-- Body
-
-  ```json
-  {
-  "token":"info"
-  }
-  ```
-
-- Reponse
-
-  ```json
-  {
-    "code":200,
-    "message":"OK",
-    "data"://"Dict"
-   {
-     "Topic":[TopicOneInfojson,TopicTwoInfojson],
-     "Author":[AuthorOneInfojson,AuthorTwoInfojson],
-     "Paper":[PaperOneInfojson,PaperTwoInfojson],
-     "Venue":[VenueOneInfojson,VenueTwoInfojson]
-   }
-  }
-  ```
 
 
 
@@ -877,12 +818,13 @@ Static Path: ```static/akg/Relation/EquivalentTo.rdf​```
   }
   ```
 
-
+向数据库增加数据时，通过同样的api向后端提交JSON格式的数据即可，因此再次不再赘述。
 
 ## Data Structure
 
+## Utils
 
-
+除了crud之外，需要在后端实现一些算法，例如搜索结果的排序，搜索的索引等等。这些问题需要在数据库的数据全部倒入之后，再进行考虑。
 
 
 ## Problems
