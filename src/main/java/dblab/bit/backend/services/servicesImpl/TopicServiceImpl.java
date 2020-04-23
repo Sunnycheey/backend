@@ -34,7 +34,7 @@ public class TopicServiceImpl implements TopicService {
 
     @Override
     public Topic getTopicById(long id, int depth) {
-        Topic topic = session.load(Topic.class, id, 1);
+        Topic topic = session.load(Topic.class, id, depth);
         return topic;
     }
 }

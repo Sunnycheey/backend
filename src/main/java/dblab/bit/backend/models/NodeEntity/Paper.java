@@ -8,7 +8,9 @@ import org.neo4j.ogm.annotation.GeneratedValue;
 import org.neo4j.ogm.annotation.Id;
 import org.neo4j.ogm.annotation.NodeEntity;
 import org.neo4j.ogm.annotation.Relationship;
+import org.neo4j.ogm.annotation.typeconversion.DateString;
 
+import java.util.Date;
 import java.util.Set;
 
 /**
@@ -31,7 +33,8 @@ public class Paper {
     private String authors;
     private String authorDetail;
     private String docType;
-    private String date;
+    @DateString
+    private Date date;
     private int referenceCount;
     private int citationCount;
     private String pdfUrl;
@@ -42,7 +45,8 @@ public class Paper {
     private String reference;
     private String referenceContext;
     private String keywords;
-    private String createdTime;
+    @DateString
+    private Date createdTime;
 
     @Relationship(type = "PaperCitation", direction = Relationship.INCOMING)
     private Set<Paper> citedPaperSet;

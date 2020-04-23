@@ -7,7 +7,9 @@ import lombok.ToString;
 import org.neo4j.ogm.annotation.Id;
 import org.neo4j.ogm.annotation.NodeEntity;
 import org.neo4j.ogm.annotation.Relationship;
+import org.neo4j.ogm.annotation.typeconversion.DateString;
 
+import java.util.Date;
 import java.util.Set;
 
 /**
@@ -28,7 +30,8 @@ public class Venue {
     private String venueName;
     private String abbreviatedName;
     private int paperCount;
-    private String createdTime;
+    @DateString
+    private Date createdTime;
     private int type;
     private String yearList;
 
