@@ -37,4 +37,5 @@ public class TopicServiceImpl implements TopicService {
         Topic topic = session.load(Topic.class, id, depth);
         return topic;
     }
+
 }

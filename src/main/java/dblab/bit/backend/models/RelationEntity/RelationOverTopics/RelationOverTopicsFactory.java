@@ -1,7 +1,5 @@
 package dblab.bit.backend.models.RelationEntity.RelationOverTopics;
 
-import dblab.bit.backend.exceptions.RelationNotFound;
-
 /**
  * @program: backend
  * @description: Factory class
@@ -9,6 +7,7 @@ import dblab.bit.backend.exceptions.RelationNotFound;
  * @create: 2020-04-23
  **/
 public class RelationOverTopicsFactory {
+    /*
     public static TopicRelations getTopicRelationsEntity(RelationType relationType) throws RelationNotFound {
         if (relationType == RelationType.ParentOf) {
             return new ParentOf(relationType);
@@ -20,4 +19,6 @@ public class RelationOverTopicsFactory {
             throw new RelationNotFound("Relation not found!");
         }
     }
+
+     */
 }

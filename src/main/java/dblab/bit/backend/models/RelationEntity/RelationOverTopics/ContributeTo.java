@@ -1,6 +1,10 @@
 package dblab.bit.backend.models.RelationEntity.RelationOverTopics;
 
-import org.neo4j.ogm.annotation.RelationshipEntity;
+import dblab.bit.backend.models.NodeEntity.Topic;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.neo4j.ogm.annotation.*;
 
 /**
  * @program: backend
@@ -8,13 +12,17 @@ import org.neo4j.ogm.annotation.RelationshipEntity;
  * @author: lihuichao
  * @create: 2020-04-23
  **/
-@RelationshipEntity(type = "ContributeTo")
-public class ContributeTo extends TopicRelations {
-    public ContributeTo(RelationType relationType) {
-        super(relationType);
-    }
+@RelationshipEntity(type = "Contribute_To")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class ContributeTo {
+    @Id
+    @GeneratedValue
+    private Long id;
+    @StartNode
+    private Topic topic1;
+    @EndNode
+    private Topic topic2;
 
-    public ContributeTo() {
-
-    }
 }

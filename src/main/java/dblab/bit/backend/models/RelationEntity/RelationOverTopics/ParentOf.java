@@ -1,6 +1,8 @@
 package dblab.bit.backend.models.RelationEntity.RelationOverTopics;
 
-import org.neo4j.ogm.annotation.RelationshipEntity;
+import dblab.bit.backend.models.NodeEntity.Topic;
+import lombok.Data;
+import org.neo4j.ogm.annotation.*;
 
 /**
  * @program: backend
@@ -9,12 +11,13 @@ import org.neo4j.ogm.annotation.RelationshipEntity;
  * @create: 2020-04-23
  **/
 @RelationshipEntity(type = "ParentOf")
-public class ParentOf extends TopicRelations {
-    ParentOf() {
-
-    }
-
-    ParentOf(RelationType relationType) {
-        super(relationType);
-    }
+@Data
+public class ParentOf {
+    @StartNode
+    private Topic topic1;
+    @EndNode
+    private Topic topic2;
+    @Id
+    @GeneratedValue
+    private long id;
 }

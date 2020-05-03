@@ -18,6 +18,6 @@ class TopicServiceImplTest {
 
     @Test
     public void getTopic() {
-        System.out.println(topicService.getTopicById(13478, 1));
+        System.out.println(topicService.getTopicById(16455, 2));
     }
 }
