@@ -8,6 +8,6 @@ import dblab.bit.backend.models.NodeEntity.Paper;
  * @author: lihuichao
  * @create: 2020-04-23
  **/
-public interface PaperService {
-    Iterable<Paper> getPaperList();
+public interface PaperService extends CrudRepository<Paper, String> {
+
 }

@@ -16,5 +16,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class Address {
+    private String settlement;
+    private String region;
+    private String postCode;
     private String country;
 }

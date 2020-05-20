@@ -1,17 +1,16 @@
-package dblab.bit.backend.services.servicesImpl;
+package dblab.bit.backend.services;
 
-import dblab.bit.backend.services.PaperService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PaperServiceImplTest {
+class VenueServiceTest {
     @Autowired
-    private PaperService paperService;
+    private VenueService venueService;
 
     @Test
     public void getAll() {
-        System.out.println(paperService.findById("1809.00064"));
+        System.out.println(venueService.findAll());
     }
 }

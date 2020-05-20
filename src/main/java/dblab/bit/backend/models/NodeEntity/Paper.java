@@ -1,16 +1,18 @@
 package dblab.bit.backend.models.NodeEntity;
 
+import dblab.bit.backend.models.NodeEntity.AuthorDetail.AuthorDetail;
+import dblab.bit.backend.utils.converter.DateTimeConverter;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import org.neo4j.ogm.annotation.GeneratedValue;
-import org.neo4j.ogm.annotation.Id;
-import org.neo4j.ogm.annotation.NodeEntity;
-import org.neo4j.ogm.annotation.Relationship;
+import org.neo4j.ogm.annotation.*;
+import org.neo4j.ogm.annotation.typeconversion.Convert;
 import org.neo4j.ogm.annotation.typeconversion.DateString;
 
+import javax.persistence.Entity;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -24,28 +26,40 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Entity
 public class Paper {
     @Id
-    @GeneratedValue
-    private String paperId;
-    private String doi;
+    @Index(unique = true)
+    private String ID;
+    private List<String> doi;
     private String title;
-    private String authors;
-    private String authorDetail;
+    private List<String> authors;
+    @Property(name = "AuthorDetail")
+    @Convert(dblab.bit.backend.utils.converter.AuthorDetailConverter.class)
+    private List<AuthorDetail> authorDetail;
+    private List<String> comment;
     private String docType;
     @DateString
     private Date date;
     private int referenceCount;
     private int citationCount;
+    @Property(name = "pdf")
     private String pdfUrl;
-    private String paperAbstract;
+    private List<String> Abstract;
+    @Property(name = "MainSubject")
     private String mainSubject;
-    private String relatedSubject;
+    @Property(name = "RelatedSubjects")
+    private List<String> relatedSubject;
+    @Property(name = "Content")
     private String content;
+    @Property(name = "Reference")
     private String reference;
+    @Property(name = "ReferenceContext")
     private String referenceContext;
-    private String keywords;
-    @DateString
+    @Property(name = "Keywords")
+    private List<String> keywords;
+    @Property(name = "CreateTime")
+    @Convert(DateTimeConverter.class)
     private Date createdTime;
 
     @Relationship(type = "PaperCitation", direction = Relationship.INCOMING)
@@ -58,5 +72,4 @@ public class Paper {
     private Set<Venue> venueSet;
     @Relationship(type = "PaperFieldOfStudy", direction = Relationship.OUTGOING)
     private Set<Topic> topicSet;
-
 }

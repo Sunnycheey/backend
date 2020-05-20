@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import java.util.Map;
 
 /**
  * @program: backend
@@ -36,6 +37,11 @@ public class TopicServiceImpl implements TopicService {
     public Topic getTopicById(long id, int depth) {
         Topic topic = session.load(Topic.class, id, depth);
         return topic;
+    }
+
+    @Override
+    public Map<Topic, Topic> parentOf() {
+        return null;
     }
 
 }
