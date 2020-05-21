@@ -2,6 +2,7 @@ package dblab.bit.backend.models.NodeEntity;
 
 import dblab.bit.backend.models.NodeEntity.AuthorDetail.AuthorDetail;
 import dblab.bit.backend.utils.converter.DateTimeConverter;
+import dblab.bit.backend.utils.converter.KeywordsConverter;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -57,6 +58,7 @@ public class Paper {
     @Property(name = "ReferenceContext")
     private String referenceContext;
     @Property(name = "Keywords")
+    @Convert(KeywordsConverter.class)
     private List<String> keywords;
     @Property(name = "CreateTime")
     @Convert(DateTimeConverter.class)

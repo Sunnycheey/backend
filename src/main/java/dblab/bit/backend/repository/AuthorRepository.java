@@ -1,4 +1,4 @@
-package dblab.bit.backend.services;
+package dblab.bit.backend.repository;
 
 import dblab.bit.backend.models.NodeEntity.Author;
 
@@ -8,6 +8,6 @@ import dblab.bit.backend.models.NodeEntity.Author;
  * @author: lihuichao
  * @create: 2020-05-20
  **/
-public interface AuthorService extends CrudRepository<Author, String> {
+public interface AuthorRepository extends CrudRepository<Author, String> {
 
 }

@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  **/
 
 @Configuration
-@EnableNeo4jRepositories(basePackages = "dblab.bit.backend.services")
+@EnableNeo4jRepositories(basePackages = "dblab.bit.backend.repository")
 @EnableTransactionManagement
 public class Neo4jConfig {
     @Bean

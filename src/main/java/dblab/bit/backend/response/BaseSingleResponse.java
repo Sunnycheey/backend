@@ -13,4 +13,10 @@ public class BaseSingleResponse<T> {
     private int code;
     private String message;
     private T data;
+
+    public void setSuccessfullyState(T data) {
+        this.code = 200;
+        this.message = "OK";
+        this.data = data;
+    }
 }

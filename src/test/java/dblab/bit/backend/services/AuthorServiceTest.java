@@ -1,5 +1,6 @@
 package dblab.bit.backend.services;
 
+import dblab.bit.backend.repository.AuthorRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -8,11 +9,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 class AuthorServiceTest {
 
     @Autowired
-    private AuthorService authorService;
+    private AuthorRepository authorRepository;
 
     @Test
     public void test() {
-        System.out.println(authorService.findById("https://dblp.uni-trier.de/pers/hd/l/Luo:Jinquan"));
+        System.out.println(authorRepository.findById("https://dblp.uni-trier.de/pers/hd/l/Luo:Jinquan"));
     }
 
 }
