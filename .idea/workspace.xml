@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7362bb3f-7bf8-4bfd-8dd7-bdd489d09bdb" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="AnnotationType" />
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1acoqf7SBwpXjvP3GHk4wjpvPYJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/arch/assets" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="dblab.bit.backend.services" />
+      <recent name="dblab.bit.backend.models.NodeEntity" />
+      <recent name="dblab.bit.backend.services.servicesImpl" />
+      <recent name="dblab.bit.backend.models.RelationEntity" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="dblab.bit.backend.services" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/arch/assets" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
+    <configuration name="AuthorServiceTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dblab.bit.backend.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dblab.bit.backend.services" />
+      <option name="MAIN_CLASS_NAME" value="dblab.bit.backend.services.AuthorServiceTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaperServiceImplTest.getAuthors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dblab.bit.backend.services.servicesImpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dblab.bit.backend.services.servicesImpl" />
+      <option name="MAIN_CLASS_NAME" value="dblab.bit.backend.services.servicesImpl.PaperServiceImplTest" />
+      <option name="METHOD_NAME" value="getAuthors" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaperServiceImplTest.getBytitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dblab.bit.backend.services.servicesImpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dblab.bit.backend.services.servicesImpl" />
+      <option name="MAIN_CLASS_NAME" value="dblab.bit.backend.services.servicesImpl.PaperServiceImplTest" />
+      <option name="METHOD_NAME" value="getBytitle" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaperServiceImplTest.getTopics" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dblab.bit.backend.services.servicesImpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dblab.bit.backend.services.servicesImpl" />
+      <option name="MAIN_CLASS_NAME" value="dblab.bit.backend.services.servicesImpl.PaperServiceImplTest" />
+      <option name="METHOD_NAME" value="getTopics" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TopicServiceImplTest.getPapers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dblab.bit.backend.services.servicesImpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dblab.bit.backend.services.servicesImpl" />
+      <option name="MAIN_CLASS_NAME" value="dblab.bit.backend.services.servicesImpl.TopicServiceImplTest" />
+      <option name="METHOD_NAME" value="getPapers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="dblab.bit.backend.BackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TopicServiceImplTest.getPapers" />
+        <item itemvalue="JUnit.PaperServiceImplTest.getTopics" />
+        <item itemvalue="JUnit.PaperServiceImplTest.getAuthors" />
+        <item itemvalue="JUnit.PaperServiceImplTest.getBytitle" />
+        <item itemvalue="JUnit.AuthorServiceTest.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="showServicesTree" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7362bb3f-7bf8-4bfd-8dd7-bdd489d09bdb" name="Default Changelist" comment="" />
+      <created>1587044435002</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587044435002</updated>
+      <workItem from="1587044440235" duration="3196000" />
+      <workItem from="1587617439491" duration="28132000" />
+      <workItem from="1588392201063" duration="6660000" />
+      <workItem from="1588515285770" duration="2279000" />
+      <workItem from="1589004988045" duration="6342000" />
+      <workItem from="1589879964033" duration="16186000" />
+      <workItem from="1589965611160" duration="19864000" />
+      <workItem from="1590893212397" duration="1657000" />
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1587649071238</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587649071241</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add @auth annotation for verification of the status of user login">
+      <created>1587651693047</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587651693047</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add readme and arch directory.">
+      <created>1587652200567</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587652200569</updated>
+    </task>
+    <task id="LOCAL-00004" summary="modify the readme in arch directory.">
+      <created>1587653110602</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587653110602</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add datestring annotation to convert date to string.">
+      <created>1587657720850</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587657720850</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add data string converter">
+      <created>1588490641653</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588490641653</updated>
+    </task>
+    <task id="LOCAL-00007" summary="using data repository rather than using session directly.">
+      <created>1590045577614</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590045577614</updated>
+    </task>
+    <task id="LOCAL-00008" summary="wip">
+      <created>1590925419989</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1590925419989</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <MESSAGE value="add @auth annotation for verification of the status of user login" />
+    <MESSAGE value="add readme and arch directory." />
+    <MESSAGE value="modify the readme in arch directory." />
+    <MESSAGE value="add datestring annotation to convert date to string." />
+    <MESSAGE value="add data string converter" />
+    <MESSAGE value="using data repository rather than using session directly." />
+    <MESSAGE value="wip" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-core/3.2.9/neo4j-ogm-core-3.2.9.jar!/org/neo4j/ogm/session/delegates/LoadOneDelegate.class</url>
+          <line>55</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-core/3.2.11/neo4j-ogm-core-3.2.11.jar!/org/neo4j/ogm/context/GraphEntityMapper.class</url>
+          <line>188</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-core/3.2.11/neo4j-ogm-core-3.2.11.jar!/org/neo4j/ogm/context/GraphEntityMapper.class</url>
+          <line>116</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-ogm-core/3.2.11/neo4j-ogm-core-3.2.11.jar!/org/neo4j/ogm/metadata/FieldInfo.class</url>
+          <line>312</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/dblab/bit/backend/services/servicesImpl/PaperServiceImplTest.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/dblab/bit/backend/services/servicesImpl/PaperServiceImplTest.java</url>
+          <line>13</line>
+          <properties class="dblab.bit.backend.services.servicesImpl.PaperServiceImplTest" method="getAll">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="response" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
