@@ -35,7 +35,7 @@ public class PaperController {
         return paperBaseCollectionResponse;
     }
 
-    @RequestMapping(value = "/search/papers/{paperId}", method = RequestMethod.GET)
+    @RequestMapping(value = "/search/papers/id/{paperId}", method = RequestMethod.GET)
     public BaseSingleResponse<Paper> getPaperById(@PathVariable String paperId) {
         Optional<Paper> paper = paperRepository.findById(paperId);
         BaseSingleResponse<Paper> baseSingleResponse = new BaseSingleResponse<>();
@@ -47,7 +47,7 @@ public class PaperController {
         return baseSingleResponse;
     }
 
-    @RequestMapping(value = "/search/papers/{title}", method = RequestMethod.GET)
+    @RequestMapping(value = "/search/papers/title/{title}", method = RequestMethod.GET)
     public BaseCollectionResponse<Paper> getPapersByTitle(@PathVariable String title) {
         List<Paper> papers = paperService.getPapersIdByTitle(title);
         BaseCollectionResponse<Paper> baseCollectionResponse = new BaseCollectionResponse<>();

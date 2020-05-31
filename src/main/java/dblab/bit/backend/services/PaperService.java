@@ -16,6 +16,7 @@ public interface PaperService {
 
     List<Paper> getPapersIdByTitle(String title);
 
+
     List<Paper> getAll();
 
     Optional<Paper> getById(String id);

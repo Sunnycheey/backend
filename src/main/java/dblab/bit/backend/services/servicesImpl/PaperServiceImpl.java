@@ -37,7 +37,7 @@ public class PaperServiceImpl implements PaperService {
 
     @Override
     public List<Paper> getPapersIdByTitle(String title) {
-        List<Paper> papers = paperRepository.findByTitle(title);
+        List<Paper> papers = paperRepository.findByTitleLike(title);
         if (papers.isEmpty()) {
             return null;
         }

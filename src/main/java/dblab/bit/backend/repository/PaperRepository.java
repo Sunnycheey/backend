@@ -24,4 +24,7 @@ public interface PaperRepository extends CrudRepository<Paper, String> {
 
     @Query("match (n:Paper {ID:$0})-[:PaperFieldOfStudy]->(g) return g;")
     List<Topic> findTopicByID(String id);
+
+    @Query("match (n:paper)-[:WritenBy]-(g) where id(g)=$0 return n;")
+    List<Paper> findPapersByAuthorID(String id);
 }
