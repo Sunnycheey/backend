@@ -57,12 +57,32 @@ public class Paper {
     private String reference;
     @Property(name = "ReferenceContext")
     private String referenceContext;
+
     @Property(name = "Keywords")
     @Convert(KeywordsConverter.class)
     private List<String> keywords;
     @Property(name = "CreateTime")
     @Convert(DateTimeConverter.class)
     private Date createdTime;
+
+    @Property(name="base_method")
+    private List<String>BaseMethod;
+
+    @Property(name="dataset_or_shared_task")
+    private List<String>Dataset;
+
+    @Property(name="prev_method")
+    private List<String>PrevMethod;
+
+    @Property(name="domain_or_problem")
+    private List<String>Domain;
+
+    @Property(name="experiment_result")
+    private List<String>ExperimentAndResult;
+
+    @Property(name="current_method")
+    private List<String>CurrentMethod;
+
 
     @Relationship(type = "PaperCitation", direction = Relationship.INCOMING)
     private Set<Paper> citedPaperSet;
