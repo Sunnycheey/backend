@@ -41,7 +41,7 @@ public class AuthorController {
 
 
     @RequestMapping(path = "/static/authors/{id}", method = RequestMethod.GET)
-    public BaseMapResponse getAuthor(@PathVariable long id) {
+    public BaseMapResponse getAuthorById(@PathVariable long id) {
         BaseMapResponse baseMapResponse = new BaseMapResponse();
         baseMapResponse.setSuccessfullyState(authorServicelmpl.getAuthorPageInfoById(id));
         return baseMapResponse;

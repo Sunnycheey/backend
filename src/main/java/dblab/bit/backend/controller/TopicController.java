@@ -46,7 +46,7 @@ public class TopicController {
 //    }
 
     @RequestMapping(value = "/static/topic/{id}",method = RequestMethod.GET)
-    public BaseMapResponse getTopicsById(@PathVariable long id){
+    public BaseMapResponse getTopicById(@PathVariable long id){
         BaseMapResponse baseMapResponse=new BaseMapResponse();
         baseMapResponse.setSuccessfullyState(topicServicelmpl.getTopicPageInfoById(id));
         return baseMapResponse;
