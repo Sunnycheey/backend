@@ -1,16 +1,17 @@
 package dblab.bit.backend.services.servicesImpl;
 
+import dblab.bit.backend.interceptor.Auth;
+import dblab.bit.backend.models.NodeEntity.Author;
 import dblab.bit.backend.models.NodeEntity.Paper;
 import dblab.bit.backend.models.NodeEntity.Topic;
+import dblab.bit.backend.models.NodeEntity.Venue;
 import dblab.bit.backend.repository.PaperRepository;
 import dblab.bit.backend.repository.TopicRepository;
 import dblab.bit.backend.services.PaperService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 /**
  * @program: backend
@@ -55,7 +56,39 @@ public class PaperServiceImpl implements PaperService {
     }
 
     @Override
-    public Optional<Paper> getById(String id) {
+    public Optional<Paper> getById(String id){
         return paperRepository.findById(id);
+    }
+
+    @Override
+    public List<Author> getAuthorByPaperId(String id){
+        return paperRepository.findAuthorsByID(id);
+    }
+
+    @Override
+    public List<Topic> getTopicByPaperId(String id){
+        return paperRepository.findTopicByID(id);
+    }
+
+    @Override
+    public List<Venue> getVenueByPaperId(String id){
+        return paperRepository.findVenueByID(id);
+    }
+
+    @Override
+    public Map<String,Object> getPaperPageInfoById(String id){
+        Map<String,Object> ans=new HashMap<>();
+        Optional<Paper> paperOptional=paperRepository.findById(id);
+        if(paperOptional.isPresent()){
+            Paper paper=paperOptional.get();
+            List<Author> authors=paperRepository.findAuthorsByID(id);
+            List<Venue> venues=paperRepository.findVenueByID(id);
+            List<Topic> topics=paperRepository.findTopicByID(id);
+            ans.put("Paper",paper);
+            ans.put("Author",authors);
+            ans.put("Topic",topics);
+            ans.put("Venue",venues);
+        }
+        return ans;
     }
 }

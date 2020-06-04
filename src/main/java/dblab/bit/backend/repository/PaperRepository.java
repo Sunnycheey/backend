@@ -3,6 +3,7 @@ package dblab.bit.backend.repository;
 import dblab.bit.backend.models.NodeEntity.Author;
 import dblab.bit.backend.models.NodeEntity.Paper;
 import dblab.bit.backend.models.NodeEntity.Topic;
+import dblab.bit.backend.models.NodeEntity.Venue;
 import org.springframework.data.neo4j.annotation.Query;
 
 import java.util.List;
@@ -14,7 +15,8 @@ import java.util.List;
  * @create: 2020-04-23
  **/
 public interface PaperRepository extends CrudRepository<Paper, String> {
-    List<Paper> findByTitle(String title);
+
+//    List<Paper> findByTitle(String title);
 
     @Query("match (n:Paper) where tolower(n.title) contains tolower($0) return n;")
     List<Paper> findByTitleLike(String title);
@@ -25,6 +27,7 @@ public interface PaperRepository extends CrudRepository<Paper, String> {
     @Query("match (n:Paper {ID:$0})-[:PaperFieldOfStudy]->(g) return g;")
     List<Topic> findTopicByID(String id);
 
-    @Query("match (n:paper)-[:WritenBy]-(g) where id(g)=$0 return n;")
-    List<Paper> findPapersByAuthorID(String id);
+    @Query("match (n:Paper {ID:$0})-[:PublishedBy]->(g) return g")
+    List<Venue> findVenueByID(String id);
+
 }

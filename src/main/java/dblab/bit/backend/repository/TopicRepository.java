@@ -19,4 +19,11 @@ public interface TopicRepository extends CrudRepository<Topic, Long> {
 
     @Query("match (n:Paper)-[:PaperFieldOfStudy*1..$depth]->(g) where id(g)=$id return n;")
     List<Paper> findPapersByTopic(@Param("id") long id, @Param("depth") long depth);
+
+    @Query("match (n:Topic) where tolower(n.RelatedEntity) contains tolower($0) return n")
+    List<Topic> findTopicByName(String name);
+
+
+
+
 }

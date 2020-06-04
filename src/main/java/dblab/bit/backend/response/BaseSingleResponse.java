@@ -19,4 +19,5 @@ public class BaseSingleResponse<T> {
         this.message = "OK";
         this.data = data;
     }
+
 }

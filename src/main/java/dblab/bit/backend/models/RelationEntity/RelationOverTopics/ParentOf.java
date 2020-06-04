@@ -20,7 +20,7 @@ import java.sql.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ParentOf {
+public class ParentOf{
     @StartNode
     private Topic topic1;
     @EndNode

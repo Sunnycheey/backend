@@ -1,8 +1,12 @@
 package dblab.bit.backend.services;
 
 import dblab.bit.backend.models.NodeEntity.Author;
+import dblab.bit.backend.models.NodeEntity.Paper;
+import dblab.bit.backend.models.NodeEntity.Venue;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 /**
  * @program: backend
@@ -12,4 +16,8 @@ import java.util.List;
  **/
 public interface AuthorService {
     List<Author> getAll();
+    List<Paper> getPapersByAuthorId(long id);
+    Optional<Author> getById(long id);
+    List<Author> getAuthorByName(String name);
+    Map<String,Object> getAuthorPageInfoById(long id);
 }
