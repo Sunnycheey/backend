@@ -36,7 +36,7 @@ public class KeywordsConverter implements AttributeConverter<List<String>, Strin
         String[] strings = s.split(",");
         for (String tmp : strings) {
             try {
-                ret.add(tmp.substring(tmp.indexOf("'") + 1, tmp.lastIndexOf("'") - 1));
+                ret.add(tmp.substring(tmp.indexOf("'") + 1, tmp.lastIndexOf("'")));
             } catch (java.lang.StringIndexOutOfBoundsException e) {
                 logger.warn("current string is {}\n".format(tmp));
             }

@@ -34,6 +34,8 @@ public class Venue {
     @Property(name = "CreatedTime")
     @Convert(DateTimeConverter.class)
     private Date createdTime;
+
+    @Property(name="Type")
     private long type;
     private String yearList;
 
